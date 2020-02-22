@@ -1,18 +1,26 @@
 import React from "react"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+
+const Heading = styled.h1`
+  color: #fff;
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-top: 10vh;
+
+  @media (max-width: 768px) {
+    font-size: 3.8rem;
+  }
+`
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
+    <Heading>Hello,<br/>
+    I’m a <span css="color: #4CDFE8">Full&nbsp;Stack<br/>
+    Web Developer</span>_</Heading>
   </Layout>
 )
 

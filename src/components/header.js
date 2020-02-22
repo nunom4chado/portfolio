@@ -26,7 +26,7 @@ const Nav = styled.nav`
 const NavLink = styled(Link)`
   padding: 1rem;
   color: #A0B3C6;
-  font-size: 1,125rem;
+  font-size: 1.125rem;
   font-weight: 500;
   text-decoration: none;
   &:hover {
