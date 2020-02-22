@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -14,9 +13,6 @@ const IndexPage = () => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/about/">About</Link>
-    <Link to="/projects/">Projects</Link>
-    <Link to="/contact/">Contact</Link>
   </Layout>
 )
 

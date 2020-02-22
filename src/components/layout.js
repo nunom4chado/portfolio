@@ -11,8 +11,13 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Header from "./header"
-import Container from "./container"
 import "./layout.css"
+
+const Container = styled.div`
+  margin: 0 auto;
+  max-width: 1054px;
+  padding: 1.0875rem 1.45rem;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,7 +33,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Container maxWidth="1054">
+      <Container>
         <main>{children}</main>
         <footer>
           Built with
