@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -45,7 +44,7 @@ const ContactPage = () => (
     <SEO title="Contact" />
     <CenterSection>
       <AlignCenter>
-        <Heading><span css="color: #4CDFE8;">connect</span>() with me</Heading>
+        <Heading><span css="color: #4CDFE8;">connect</span>() with&nbsp;me</Heading>
         <ContactParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</ContactParagraph>
         <ExternalLink href="https://google.com" target="_blank">
           <FontAwesomeIcon icon={["fab", "linkedin-in"]}  />

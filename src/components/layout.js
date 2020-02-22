@@ -31,7 +31,7 @@ const ContentWrapper = styled.div`
 
 const Main = styled.main`
   margin: 0 auto;
-  max-width: 1054px;
+  max-width: 1264px; /* 1054 */
   padding: 1.0875rem 1.45rem;
 `
 
