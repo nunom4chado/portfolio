@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -34,6 +35,11 @@ const ContactParagraph = styled.p`
   margin: 48px 0;
 `
 
+const ExternalLink = styled.a`
+  font-size: 3rem;
+  margin: 0 2rem 0;
+`
+
 const ContactPage = () => (
   <Layout>
     <SEO title="Contact" />
@@ -41,6 +47,15 @@ const ContactPage = () => (
       <AlignCenter>
         <Heading><span css="color: #4CDFE8;">connect</span>() with me</Heading>
         <ContactParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</ContactParagraph>
+        <ExternalLink href="https://google.com" target="_blank">
+          <FontAwesomeIcon icon={["fab", "linkedin-in"]}  />
+        </ExternalLink>
+        <ExternalLink href="https://google.com" target="_blank">
+          <FontAwesomeIcon icon={["fab", "github"]}  />
+        </ExternalLink>
+        <ExternalLink href="https://google.com" target="_blank">
+          <FontAwesomeIcon icon="envelope"  />
+        </ExternalLink>
       </AlignCenter>
     </CenterSection>
   </Layout>

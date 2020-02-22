@@ -29,9 +29,6 @@ const NavLink = styled(Link)`
   font-size: 1.125rem;
   font-weight: 500;
   text-decoration: none;
-  &:hover {
-    color: #4CDFE8;
-  }
 `
 
 const Header = ({ siteTitle }) => (
@@ -41,9 +38,9 @@ const Header = ({ siteTitle }) => (
         {siteTitle}
       </Logo>
       <Nav>
-        <NavLink to="/about/">/about</NavLink>
-        <NavLink to="/projects/">/projects</NavLink>
-        <NavLink to="/contact/">/contact</NavLink>
+        <NavLink to="/about/" activeClassName="active">/about</NavLink>
+        <NavLink to="/projects/" activeClassName="active">/projects</NavLink>
+        <NavLink to="/contact/" activeClassName="active">/contact</NavLink>
       </Nav>
     </Container>
   </header>

@@ -20,14 +20,18 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 a {
+  color: #728CA0;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
 a:hover {
+  color: #4CDFE8;
   outline-width: 0;
 }
-
+nav a.active {
+  color: #4CDFE8;
+}
 img {
   max-width: 100%;
 }
