@@ -4,21 +4,13 @@ import Typist from "react-typist"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PageHeading from "../components/PageHeading"
 
 const CenterSection = styled.div`
   height: calc(100vh - 12rem);
   display: flex;
   align-items: center;
-`
-
-const Heading = styled.h1`
-  color: #fff;
-  font-size: 4.5rem;
-  font-weight: 700;
-
-  @media (max-width: 768px) {
-    font-size: 3.8rem;
-  }
+  min-height: 300px;
 `
 
 const TypingAnimation = styled(Typist)`
@@ -48,7 +40,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <CenterSection>
       <div>
-        <Heading>
+        <PageHeading>
           <TypingAnimation cursor={{element: '_'}} css="height: 237px">
             Hello,<Typist.Delay ms={1500} /><br />
             I’m a{" "}
@@ -58,7 +50,7 @@ const IndexPage = () => (
               Web Developer
             </span>
           </TypingAnimation>
-        </Heading>
+        </PageHeading>
       </div>
     </CenterSection>
   </Layout>

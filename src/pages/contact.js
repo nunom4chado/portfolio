@@ -4,26 +4,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PageHeading from "../components/PageHeading"
 
 const CenterSection = styled.div`
   height: calc(100vh - 12rem);
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 350px;
 `
 
-const AlignCenter = styled.div`
+const TextCenter = styled.div`
   text-align: center;
-`
-
-const Heading = styled.h1`
-  color: #fff;
-  font-size: 4.5rem;
-  font-weight: 700;
-
-  @media (max-width: 768px) {
-    font-size: 3.8rem;
-  }
 `
 
 const ContactParagraph = styled.p`
@@ -43,8 +35,8 @@ const ContactPage = () => (
   <Layout>
     <SEO title="Contact" />
     <CenterSection>
-      <AlignCenter>
-        <Heading><span css="color: #4CDFE8;">connect</span>() with&nbsp;me</Heading>
+      <TextCenter>
+        <PageHeading><span css="color: #4CDFE8;">connect</span>() with&nbsp;me</PageHeading>
         <ContactParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</ContactParagraph>
         <ExternalLink href="https://google.com" target="_blank">
           <FontAwesomeIcon icon={["fab", "linkedin-in"]}  />
@@ -55,7 +47,7 @@ const ContactPage = () => (
         <ExternalLink href="https://google.com" target="_blank">
           <FontAwesomeIcon icon="envelope"  />
         </ExternalLink>
-      </AlignCenter>
+      </TextCenter>
     </CenterSection>
   </Layout>
 )

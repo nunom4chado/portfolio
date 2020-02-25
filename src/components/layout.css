@@ -8,6 +8,7 @@ html {
 body {
   color: #A0B3C6;
   font-family: 'Roboto Mono', monospace;
+  letter-spacing: -.5px;
   background-color: #191F25;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -42,6 +43,7 @@ h1,h2,h3,h4,h5,h6 {
   text-rendering: optimizeLegibility;
   line-height: 1.1;
   font-weight: bold;
+  color: #fff;
 }
 
 h1 {
