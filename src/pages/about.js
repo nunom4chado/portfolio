@@ -7,6 +7,7 @@ import PageHeading from "../components/PageHeading"
 import BodyText from "../components/BodyText"
 import ProfilePic from "../components/ProfilePic"
 import Skills from "../components/Skills"
+import Experience from "../components/Experience"
 
 const AboutSection = styled.section`
   margin: 0 auto;
@@ -49,6 +50,8 @@ const AboutPage = () => (
     </AboutSection>
 
     <Skills />
+
+    <Experience />
 
   </Layout>
 )
