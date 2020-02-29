@@ -6,6 +6,7 @@ const TabItem = styled.li`
   list-style: none;
   margin-bottom: -3px;
   padding: 0.5rem 0.75rem;
+  cursor: pointer;
 `
 
 const TabItemActive = styled(TabItem)`
@@ -35,7 +36,6 @@ function Tabs({children}) {
       <ol css={`
         border-bottom: 3px solid #ccc;
         padding-left: 0;
-        cursor: pointer;
       `}>
         {children.map((child) => {
           const { label } = child.props

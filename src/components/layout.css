@@ -73,10 +73,3 @@ p {
     font-size: 100%;
   }
 }
-
-
-
-.tab-list-active {
-  color: #4CDFE8;
-  border-bottom: 3px solid #4CDFE8;
-}
