@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from "styled-components"
 
 const TabItem = styled.li`
+  color: #728CA0;
   display: inline-block;
   list-style: none;
   margin-bottom: -3px;
@@ -34,7 +35,7 @@ function Tabs({children}) {
   return (
     <div>
       <ol css={`
-        border-bottom: 3px solid #ccc;
+        border-bottom: 3px solid #505E6C;
         padding-left: 0;
       `}>
         {children.map((child) => {
