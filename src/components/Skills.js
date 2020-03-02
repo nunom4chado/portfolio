@@ -42,30 +42,6 @@ const Ul = styled.ul`
   }
 `
 
-// Demo Data
-const LanguagesSkills = [
-  "HTML",
-  "(S)CSS",
-  "JavaScript (ES6)",
-  "PHP"
-]
-
-const TechSkills = [
-  "React",
-  "NodeJS",
-  "ExpressJS",
-  "Gatsby",
-  "GraphQL",
-  "MongoDB"
-]
-
-const DesignSkills = [
-  "Figma",
-  "Sketch 3",
-  "Photoshop",
-  "Illustrator"
-]
-
 const SkillList = (props) => (
   <Ul columns={props.columns}>
     { props.skills.map(skill => <li key={skill}>{skill}</li>) }
@@ -73,21 +49,21 @@ const SkillList = (props) => (
 )
 
 
-const Skills = () => (
+const Skills = ({data}) => (
   <SkillsContainer>
     <SubHeading>NM.<span style={{color: "#4CDFE8"}}>getSkills</span>()</SubHeading>
     <Row>
       <Col>
         <h3>Languages</h3>
-        <SkillList skills={LanguagesSkills} />
+        <SkillList skills={data.languages} />
       </Col>
       <Col>
         <h3>Technologies</h3>
-        <SkillList skills={TechSkills} columns="2" />
+        <SkillList skills={data.technologies} columns="2" />
       </Col>
       <Col>
         <h3>Design Software</h3>
-        <SkillList skills={DesignSkills} columns="2" />
+        <SkillList skills={data.design} columns="2" />
       </Col>
     </Row>
   </SkillsContainer>

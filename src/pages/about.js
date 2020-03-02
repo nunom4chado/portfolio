@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import { graphql } from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageHeading from "../components/PageHeading"
-import BodyText from "../components/BodyText"
 import ProfilePic from "../components/ProfilePic"
 import Skills from "../components/Skills"
 import Experience from "../components/Experience"
@@ -28,9 +28,15 @@ const AboutContent = styled.div`
   @media (max-width: 768px) {
     margin-left: 0;
   }
+
+  & p {
+    color: #A0B3C6;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+  }
 `
 
-const AboutPage = () => (
+const AboutPage = ({data}) => (
   <Layout>
     <SEO title="About" />
 
@@ -39,21 +45,42 @@ const AboutPage = () => (
 
       <AboutContent>
         <PageHeading><span style={{color: "#4CDFE8"}}>$</span> whoami</PageHeading>
-        <BodyText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
-        </BodyText>
-        <BodyText>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </BodyText>
+        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </AboutContent>
     </AboutSection>
 
-    <Skills />
+    <Skills data={data.markdownRemark.frontmatter.skills} />
 
-    <Experience />
+    <Experience data={data.markdownRemark.frontmatter.experience} />
 
   </Layout>
 )
+
+export const query = graphql`
+  {
+    markdownRemark(frontmatter: {title: {eq: "about"}}) {
+      frontmatter {
+        skills {
+          languages
+          technologies
+          design
+        }
+        experience {
+          work {
+            title
+            date
+            text
+          }
+          education {
+            title
+            date
+            text
+          }
+        }
+      }
+      html
+    }
+  }
+`
 
 export default AboutPage

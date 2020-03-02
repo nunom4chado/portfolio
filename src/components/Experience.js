@@ -41,30 +41,11 @@ const Ul = styled.ul`
   }
 `
 
-
-const workList = [
-  {
-    name: "One",
-    date: "2020",
-    text: "content one."
-  },
-  {
-    name: "Two",
-    date: "2019",
-    text: "content two."
-  },
-  {
-    name: "Three",
-    date: "2018",
-    text: "content three."
-  }
-]
-
 const ExperienceList = ({data}) => (
   <Ul>
     {data.map(item => (
-      <li key={item.name}>
-        <h3>{item.name}</h3>
+      <li key={item.title}>
+        <h3>{item.title}</h3>
         <p className="date">{item.date}</p>
         <p className="text">{item.text}</p>
       </li>
@@ -72,15 +53,15 @@ const ExperienceList = ({data}) => (
   </Ul>
 )
 
-const Experience = () => (
+const Experience = ({data}) => (
   <ExperienceContainer>
     <SubHeading>NM.<span style={{color: "#4CDFE8"}}>getExperience</span>()</SubHeading>
     <Tabs>
       <div label="Work">
-        <ExperienceList data={workList} />
+        <ExperienceList data={data.work} />
       </div>
       <div label="Education">
-      <div>Education Content</div>
+        <ExperienceList data={data.education} />
       </div>
     </Tabs>
   </ExperienceContainer>
