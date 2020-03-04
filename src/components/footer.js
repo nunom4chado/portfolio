@@ -9,6 +9,7 @@ const FooterSection = styled.footer`
   text-align: center;
   color: #728CA0;
   font-size: 0.875rem;
+  z-index: 600;
 `
 
 const Footer = () => (
