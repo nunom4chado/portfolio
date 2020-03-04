@@ -1,13 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { graphql } from 'gatsby'
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageHeading from "../components/PageHeading"
 
 const Container = styled.div`
-  margin: 1rem auto 2.5rem;
+  margin: .5rem auto 2.5rem;
   max-width: 1054px;
 `
 
@@ -15,7 +17,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
-  margin-top: 3.5rem;
+  margin-top: 4.5rem;
 
   @media (max-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
@@ -38,140 +40,127 @@ const IconLink = styled.a`
   }
 `
 
-const Card = ({data}) => (
-  <div key={data.id}
-  css={`
-    background-color: #1C242C;
-    border-radius: 4px;
-    padding: 1.5rem;
-  `}>
-    <div css={`
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+const Card = ({data}) => {
+  const project = data.node.childMarkdownRemark
+
+  return (
+    <div key={project.id}
+    css={`
+      background-color: #1C242C;
+      border-radius: 4px;
     `}>
-      <span css={`color: #728CA0;`}>{data.date}</span>
-      <div>
-        <IconLink>
-          <FontAwesomeIcon icon={["fab", "github"]} />
-        </IconLink>
-        <IconLink>
-          <FontAwesomeIcon icon="external-link-square-alt" />
-        </IconLink>
+      <a target="_blank" rel="noopener noreferrer" href={project.frontmatter.url}>
+        <Img fluid={project.frontmatter.image.childImageSharp.fluid} css={`
+          filter: opacity(0.32);
+          transition: .3s ease-out;
+
+          &:hover {
+            filter: opacity(1);
+          }
+        `} />
+      </a>
+      <div css={`
+        padding: 1.5rem;
+      `}>
+        <div css={`
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        `}>
+          <span css={`color: #728CA0;`}>{project.frontmatter.date}</span>
+          <div>
+            <IconLink target="_blank" rel="noopener noreferrer" href={project.frontmatter.gitrepo}>
+              <FontAwesomeIcon icon={["fab", "github"]} />
+            </IconLink>
+            <IconLink target="_blank" rel="noopener noreferrer" href={project.frontmatter.url}>
+              <FontAwesomeIcon icon="external-link-square-alt" />
+            </IconLink>
+          </div>
+        </div>
+
+        <h3 css={`
+          font-family: "Roboto", sans-serif;
+          font-size: 1.3125rem;
+          margin: 1rem 0 .5rem;
+        `}>
+          <a target="_blank"
+            rel="noopener noreferrer"
+            href={project.frontmatter.url}
+            css={`
+              color: #E5E5E5;
+              text-decoration: none;
+            `}
+            >
+            {project.frontmatter.title}
+          </a>
+        </h3>
+        <div css={`
+          font-family: "Roboto", sans-serif;
+          line-height: 1.45;
+        `} dangerouslySetInnerHTML={{ __html: project.html }} />
+        <ul css={`
+          list-style: none;
+          padding: 0;
+          margin: 0 -0.5rem;
+        `}>
+          {project.frontmatter.tags.map(item => (
+            <li css={`
+              font-size: .75rem;
+              display: inline-block;
+              border: 1px solid #4CDFE8;
+              border-radius: 50px;
+              color: #4CDFE8;
+              padding: .25rem .5rem;
+              margin: .25rem;
+            `}>{item}</li>
+          ))}
+        </ul>
       </div>
     </div>
+  )
+}
 
-    <h3 css={`
-      font-family: "Roboto", sans-serif;
-      font-size: 1.3125rem;
-      color: #E5E5E5;
-      margin: 1rem 0 .5rem;
-    `}>{data.title}</h3>
-    <p css={`
-      font-family: "Roboto", sans-serif;
-      line-height: 1.45;
-    `}>{data.description}</p>
-    <ul css={`
-      list-style: none;
-      padding: 0;
-      margin: 0 -0.5rem;
-    `}>
-      {data.tags.map(item => (
-        <li css={`
-          font-size: .75rem;
-          display: inline-block;
-          border: 1px solid #4CDFE8;
-          border-radius: 50px;
-          color: #4CDFE8;
-          padding: .25rem .5rem;
-          margin: .25rem;
-        `}>{item}</li>
-      ))}
-    </ul>
-  </div>
-)
-
-const ProjectsData = [
-  {
-    id: 0,
-    title: "portolimousines.com redesign, developement and deploy",
-    date: 2020,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    tags: [
-      "AngularJS",
-      "SCSS",
-      "HTML"
-    ]
-  },
-  {
-    id: 1,
-    title: "portolimousines.com redesign, developement and deploy",
-    date: 2019,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    tags: [
-      "React",
-      "GraphQL",
-      "Styled-Components"
-    ]
-  },
-  {
-    id: 2,
-    title: "portolimousines.com redesign, developement and deploy",
-    date: 2018,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    tags: [
-      "AngularJS",
-      "SCSS",
-      "HTML"
-    ]
-  },
-  {
-    id: 3,
-    title: "portolimousines.com redesign, developement and deploy",
-    date: 2017,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    tags: [
-      "AngularJS",
-      "SCSS",
-      "HTML"
-    ]
-  },
-  {
-    id: 4,
-    title: "portolimousines.com redesign, developement and deploy",
-    date: 2016,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    tags: [
-      "AngularJS",
-      "SCSS",
-      "HTML"
-    ]
-  },
-  {
-    id: 5,
-    title: "portolimousines.com redesign, developement and deploy",
-    date: 2015,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    tags: [
-      "AngularJS",
-      "SCSS",
-      "HTML"
-    ]
-  }
-]
-
-const ProjectsPage = () => (
+const ProjectsPage = ({data}) => (
   <Layout>
     <SEO title="Projects" />
     <Container>
-      <PageHeading css={`text-align: center;`}><span style={{color: "#4CDFE8"}}>$</span> ls Projects</PageHeading>
+      <PageHeading css={`text-align: center;`}><span css={`color: #4CDFE8`}>/</span>projects</PageHeading>
       <Grid>
-        {ProjectsData.map(project => (
+        {data.allFile.edges.map(project => (
           <Card data={project} />
         ))}
       </Grid>
     </Container>
   </Layout>
 )
+
+export const query = graphql`
+  {
+    allFile(filter: {relativeDirectory: {eq: "projects"}}, sort: {fields: childMarkdownRemark___frontmatter___date, order: DESC}) {
+      edges {
+        node {
+          childMarkdownRemark {
+            id
+            frontmatter {
+              title
+              date
+              url
+              gitrepo
+              tags
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 600, maxHeight: 250) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+            html
+          }
+        }
+      }
+    }
+  }
+`
 
 export default ProjectsPage
