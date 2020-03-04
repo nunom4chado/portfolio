@@ -10,6 +10,10 @@ const SubHeading = styled.h2`
   @media (max-width: 768px) {
     font-size: 2.478rem;
   }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `
 
 export default SubHeading

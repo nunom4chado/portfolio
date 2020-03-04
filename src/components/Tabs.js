@@ -53,7 +53,6 @@ function Tabs({children}) {
       </ol>
       <div>
         {children.map((child) => {
-          console.log(child.props)
           if (child.props.label !== activeTab) return undefined
           return child.props.children
         })}

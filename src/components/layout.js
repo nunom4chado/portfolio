@@ -33,6 +33,10 @@ const Main = styled.main`
   margin: 0 auto;
   max-width: 1264px;
   padding: 1.0875rem 1.45rem;
+
+  @media (max-width: 1300px) and (min-width: 600px) {
+    padding: 1.0875rem 2.5rem;
+  }
 `
 
 const Layout = ({ children }) => {

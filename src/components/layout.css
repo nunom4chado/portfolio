@@ -73,8 +73,3 @@ p {
   padding: 0;
   margin: 0 0 1.45rem 0;
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
