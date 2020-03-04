@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+
+*:focus {
+  outline-color: #4CDFE8;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

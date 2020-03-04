@@ -14,6 +14,13 @@ const CenterSection = styled.div`
 `
 
 const TypingAnimation = styled(Typist)`
+  height: 237px;
+
+  @media (max-width: 625px) {
+    font-size: 3rem;
+    height: 260px;
+  }
+
   & .Cursor {
     display: inline-block;
 
@@ -41,7 +48,7 @@ const IndexPage = () => (
     <CenterSection>
       <div>
         <PageHeading>
-          <TypingAnimation cursor={{element: '_'}} css="height: 237px">
+          <TypingAnimation cursor={{element: '_'}}>
             Hello,<Typist.Delay ms={1500} /><br />
             I’m a{" "}
             <span css="color: #4CDFE8">

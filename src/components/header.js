@@ -18,18 +18,54 @@ const Logo = styled(Link)`
   font-weight: 700;
   font-size: 1.31rem;
 `
-const MobileMenuIcon = styled.div`
-  width: 40px;
-  height: 40px;
-  background: grey;
-  display: none;
-  z-index: 600;
-  cursor: pointer;
 
-  @media (max-width: 768px) {
-    display: block;
-  }
-`
+const MobileMenuIcon = ({onClick, isOpen}) => (
+  <button type="button"
+    aria-label="Menu"
+    aria-controls="navigation"
+    className={isOpen ? "open" : ""}
+    onClick={() => onClick()}
+    css={`
+      display: none;
+      z-index: 600;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+
+      margin: 1em;
+      width: 40px;
+    
+      &:after, 
+      &:before, 
+      & span {
+        background-color: #fff;
+        border-radius: 3px;
+        content: '';
+        display: block;
+        height: 2px;
+        margin: 7px 0;
+        transition: all .2s ease-in-out;
+      }
+
+      /* Animates to "X" when Mobile Menu is open */
+      &.open:before {
+        transform: translateY(9px) rotate(135deg);
+      }
+      &.open:after {
+        transform: translateY(-9px) rotate(-135deg);
+      }
+      &.open span {
+        transform: scale(0);
+      }
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+    `}
+    >
+    <span></span>
+  </button>
+)
 
 const Nav = styled.nav`
   display: flex;
@@ -80,7 +116,7 @@ const Header = ({ siteTitle }) => {
         <Logo to="/">
           {siteTitle}
         </Logo>
-        <MobileMenuIcon onClick={toggleMobileMenu} />
+        <MobileMenuIcon isOpen={isMobileMenuOpen} onClick={toggleMobileMenu} />
         <Nav className={isMobileMenuOpen ? "open" : ""}>
           <NavLink to="/about/" activeClassName="active">/about</NavLink>
           <NavLink to="/projects/" activeClassName="active">/projects</NavLink>
