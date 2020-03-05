@@ -38,13 +38,13 @@ const ContactPage = () => (
       <TextCenter>
         <PageHeading><span css="color: #4CDFE8;">connect</span>() with&nbsp;me</PageHeading>
         <ContactParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</ContactParagraph>
-        <ExternalLink href="https://google.com" target="_blank">
+        <ExternalLink rel="noopener noreferrer" href="https://www.linkedin.com/in/nunom4chado/" target="_blank">
           <FontAwesomeIcon icon={["fab", "linkedin-in"]}  />
         </ExternalLink>
-        <ExternalLink href="https://google.com" target="_blank">
+        <ExternalLink rel="noopener noreferrer" href="https://github.com/nunom4chado" target="_blank">
           <FontAwesomeIcon icon={["fab", "github"]}  />
         </ExternalLink>
-        <ExternalLink href="https://google.com" target="_blank">
+        <ExternalLink rel="noopener noreferrer" href="mailto:nunom4chado@gmail.com" target="_blank">
           <FontAwesomeIcon icon="envelope"  />
         </ExternalLink>
       </TextCenter>
