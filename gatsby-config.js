@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `<NunoMachado />`,
-    description: `A portfolio by nunomachado created with GatsbyJS.`,
+    description: `A portfolio by nunom4chado created with GatsbyJS.`,
     author: `nunom4chado`,
   },
   plugins: [
@@ -33,7 +33,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/nmLogo.png`, // This path is relative to the root of the site.
       },
     },
     {
