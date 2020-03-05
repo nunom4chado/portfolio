@@ -44,7 +44,7 @@ const Card = ({data}) => {
   const project = data.node.childMarkdownRemark
 
   return (
-    <div key={project.id}
+    <div
     css={`
       background-color: #1C242C;
       border-radius: 4px;
@@ -104,7 +104,8 @@ const Card = ({data}) => {
           margin: 0 -0.5rem;
         `}>
           {project.frontmatter.tags.map(item => (
-            <li css={`
+            <li key={item}
+              css={`
               font-size: .75rem;
               display: inline-block;
               border: 1px solid #4CDFE8;
@@ -127,7 +128,7 @@ const ProjectsPage = ({data}) => (
       <PageHeading css={`text-align: center;`}><span css={`color: #4CDFE8`}>/</span>projects</PageHeading>
       <Grid>
         {data.allFile.edges.map(project => (
-          <Card data={project} />
+          <Card key={project.node.childMarkdownRemark.id} data={project} />
         ))}
       </Grid>
     </Container>
