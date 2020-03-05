@@ -25,41 +25,41 @@ skills: {
 experience: {
   work: [
     {
-      title: "One",
-      date: "2019 - 2020",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor."
-    },
-    {
-      title: "Two",
-      date: "2018 - 2019",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor."
-    },
-    {
-      title: "Three",
+      title: "Upper Class - Transportes e Serviços Lda",
       date: "2017 - 2018",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor."
+      text: "Upper Class is a limousine service based in north of Portugal. I managed multiple websites for them and redesigned, developed and deployed the main website with AngularJS - portolimousines.com."
+    },
+    {
+      title: "Informéritus, Serviços de Informática, Lda",
+      date: "2018 - 2019",
+      text: "IT business based near Porto with the main focus on reselling billing software and provide technical support. I worked as tech support and maintain the business website."
+    },
+    {
+      title: "IPBRICK",
+      date: "2012 - 2012",
+      text: "IPBRICK is a business specialized in Corporate Communication Solutions with its core product being a robust Communication Platform. I did an internship here wich was part of my networking course."
     }
   ],
   education: [
     {
-      title: "Ed One",
-      date: "2019 - 2020",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor."
+      title: "FreeCodeCamp",
+      date: "2018 - 2020",
+      text: "FreeCodeCamp is a non-profit that consists of an interactive learning web platform. This is where is improved my skills and learned the backend."
     },
     {
-      title: "Ed Two",
-      date: "2018 - 2019",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor."
+      title: "CodeCademy",
+      date: "2018 - 2018",
+      text: "Codecademy is an online interactive platform that offers free coding classes in 12 different programming languages. I took the Skill Path program 'Create a Front-end App with React' which helped me understand React and the features of ES6."
     },
     {
-      title: "Ed Three",
-      date: "2017 - 2018",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor."
+      title: "Escola Secundária de Tomaz Pelayo",
+      date: "2009 - 2012",
+      text: "This is the school where my path in tech began. I took a 3 years Network course which open my eyes how computers communicate with each other. Also this is where my interest in Web Developement really grew. I had been in touch with HTML and CSS in the past but this time I invested much more time exploring new implementation of these languages, playing with CMS's like Wordpress, Joomla and Drupal, and eventual was introduced to JavaScript and PHP."
     }
   ]
 }
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+I´m a tech passionate that evolved from IT to Web Developer. I enjoy the hole process of building complete web applications but have a special interest in building interfaces.
 
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Aside from tech, the things that I love to do are play guitar, occasionally piano, watch series and movies, skateboard/snowboard, calisthenics, yoga, and pretty much every radical outdoor activity.

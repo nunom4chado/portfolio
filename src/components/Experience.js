@@ -12,11 +12,11 @@ const ExperienceContainer = styled.section`
 
 const Ul = styled.ul`
   list-style-image: url(${Caret});
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
 
   & li {
     padding-left: .5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   & h3 {
@@ -38,6 +38,7 @@ const Ul = styled.ul`
   & p.text {
     color: #728CA0;
     font-family: "Roboto", sans-serif;
+    line-height: 1.4;
   }
 `
 
