@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
 import PageHeading from "../components/PageHeading"
 import Skills from "../components/Skills"
 import Experience from "../components/Experience"
