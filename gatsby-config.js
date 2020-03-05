@@ -27,11 +27,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `nunom4chado-portfolio`,
+        short_name: `nunom4chado`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#191F25`,
+        theme_color: `#4CDFE8`,
         display: `minimal-ui`,
         icon: `src/images/nmLogo.png`, // This path is relative to the root of the site.
       },
