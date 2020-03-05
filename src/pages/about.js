@@ -5,9 +5,9 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageHeading from "../components/PageHeading"
-import ProfilePic from "../components/ProfilePic"
 import Skills from "../components/Skills"
 import Experience from "../components/Experience"
+import ProfileImg from "../components/ProfileImage"
 
 const AboutSection = styled.section`
   margin: 0 auto;
@@ -41,7 +41,14 @@ const AboutPage = ({data}) => (
     <SEO title="About" />
 
     <AboutSection>
-      <ProfilePic />
+      <div css={`
+        /* fix Gatsby Image fluid inside a flexbox container 
+          width needs to be 100% or <ProfileImg /> will have width of 0
+        */
+        width: 100%;
+      `}>
+        <ProfileImg />
+      </div>
 
       <AboutContent>
         <PageHeading><span style={{color: "#4CDFE8"}}>$</span> whoami</PageHeading>
