@@ -48,7 +48,7 @@ const IndexPage = () => (
     <CenterSection>
       <div>
         <PageHeading>
-          <TypingAnimation cursor={{element: '_'}}>
+          <TypingAnimation cursor={{element: '_', hideWhenDone: true,}}>
             Hello,<Typist.Delay ms={1500} /><br />
             I’m a{" "}
             <span css="color: #4CDFE8">
