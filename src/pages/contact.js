@@ -28,6 +28,11 @@ const ContactParagraph = styled.p`
 const ExternalLink = styled.a`
   font-size: 3rem;
   margin: 0 2rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin: 0 1rem 0;
+  }
 `
 
 const ContactPage = () => (
