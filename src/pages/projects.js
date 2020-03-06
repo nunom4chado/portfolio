@@ -68,9 +68,11 @@ const Card = ({data}) => {
         `}>
           <span css={`color: #728CA0;`}>{project.frontmatter.date}</span>
           <div>
-            <IconLink target="_blank" rel="noopener noreferrer" href={project.frontmatter.gitrepo}>
-              <FontAwesomeIcon icon={["fab", "github"]} />
-            </IconLink>
+            {project.frontmatter.gitrepo && 
+              <IconLink target="_blank" rel="noopener noreferrer" href={project.frontmatter.gitrepo}>
+                <FontAwesomeIcon icon={["fab", "github"]} />
+              </IconLink>
+            }
             <IconLink target="_blank" rel="noopener noreferrer" href={project.frontmatter.url}>
               <FontAwesomeIcon icon="external-link-square-alt" />
             </IconLink>
