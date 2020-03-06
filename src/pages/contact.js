@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import PageHeading from "../components/PageHeading"
 
 const CenterSection = styled.div`
   height: calc(100vh - 12rem);
@@ -36,7 +35,7 @@ const ContactPage = () => (
     <SEO title="Contact" />
     <CenterSection>
       <TextCenter>
-        <PageHeading><span css="color: #4CDFE8;">connect</span>() with&nbsp;me</PageHeading>
+        <h1><span css="color: #4CDFE8;">connect</span>() with&nbsp;me</h1>
         <ContactParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</ContactParagraph>
         <ExternalLink rel="noopener noreferrer" href="https://www.linkedin.com/in/nunom4chado/" target="_blank">
           <FontAwesomeIcon icon={["fab", "linkedin-in"]}  />

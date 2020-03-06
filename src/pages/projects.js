@@ -6,7 +6,6 @@ import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import PageHeading from "../components/PageHeading"
 
 const Container = styled.div`
   margin: .5rem auto 2.5rem;
@@ -125,7 +124,7 @@ const ProjectsPage = ({data}) => (
   <Layout>
     <SEO title="Projects" />
     <Container>
-      <PageHeading css={`text-align: center;`}><span css={`color: #4CDFE8`}>/</span>projects</PageHeading>
+      <h1 css={`text-align: center;`}><span css={`color: #4CDFE8`}>$</span> ls projects</h1>
       <Grid>
         {data.allFile.edges.map(project => (
           <Card key={project.node.childMarkdownRemark.id} data={project} />

@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import SubHeading from "./SubHeading"
 import Caret from "../images/caret.svg"
 
 const SkillsContainer = styled.section`
@@ -51,7 +50,7 @@ const SkillList = (props) => (
 
 const Skills = ({data}) => (
   <SkillsContainer>
-    <SubHeading>NM.<span style={{color: "#4CDFE8"}}>getSkills</span>()</SubHeading>
+    <h2>NM.<span css={`color: #4CDFE8`}>getSkills</span>()</h2>
     <Row>
       <Col>
         <h3>Languages</h3>

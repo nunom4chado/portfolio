@@ -52,10 +52,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 4.5rem;
+  font-weight: 700;
 }
 h2 {
-  font-size: 1.62671rem;
+  margin-top: 5.5rem;
+  margin-bottom: 3.5rem;
+  font-size: 2.875rem;
+  font-weight: 700;
+  text-align: center;
 }
 h3 {
   font-size: 1.38316rem;
@@ -72,4 +77,16 @@ h6 {
 p {
   padding: 0;
   margin: 0 0 1.45rem 0;
+}
+
+
+
+@media (max-width: 768px) {
+  h1 {font-size: 3.8rem;}
+  h2 {font-size: 2.478rem;}
+}
+
+@media (max-width: 480px) {
+  h1{font-size: 2.8rem;}
+  h2 {font-size: 2rem;}
 }

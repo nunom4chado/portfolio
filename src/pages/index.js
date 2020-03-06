@@ -4,7 +4,6 @@ import Typist from "react-typist"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import PageHeading from "../components/PageHeading"
 
 const CenterSection = styled.div`
   height: calc(100vh - 12rem);
@@ -47,7 +46,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <CenterSection>
       <div>
-        <PageHeading>
+        <h1>
           <TypingAnimation cursor={{element: '_', hideWhenDone: true,}}>
             Hello,<Typist.Delay ms={1500} /><br />
             I’m a{" "}
@@ -57,7 +56,7 @@ const IndexPage = () => (
               Web Developer
             </span>
           </TypingAnimation>
-        </PageHeading>
+        </h1>
       </div>
     </CenterSection>
   </Layout>

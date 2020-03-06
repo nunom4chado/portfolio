@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import PageHeading from "../components/PageHeading"
 import Skills from "../components/Skills"
 import Experience from "../components/Experience"
 import ProfileImg from "../components/ProfileImage"
@@ -51,7 +50,7 @@ const AboutPage = ({data}) => (
       </div>
 
       <AboutContent>
-        <PageHeading><span style={{color: "#4CDFE8"}}>$</span> whoami</PageHeading>
+        <h1><span style={{color: "#4CDFE8"}}>$</span> whoami</h1>
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </AboutContent>
     </AboutSection>

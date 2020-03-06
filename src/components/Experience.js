@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import SubHeading from "./SubHeading"
 import Tabs from "./Tabs"
 import Caret from "../images/caret.svg"
 
@@ -56,7 +55,7 @@ const ExperienceList = ({data}) => (
 
 const Experience = ({data}) => (
   <ExperienceContainer>
-    <SubHeading>NM.<span style={{color: "#4CDFE8"}}>getExperience</span>()</SubHeading>
+    <h2>NM.<span css={`color: #4CDFE8`}>getExperience</span>()</h2>
     <Tabs>
       <div label="Work">
         <ExperienceList data={data.work} />
