@@ -30,8 +30,8 @@ module.exports = {
         name: `nunom4chado-portfolio`,
         short_name: `nunom4chado`,
         start_url: `/`,
-        background_color: `#191F25`,
-        theme_color: `#4CDFE8`,
+        background_color: `#06080B`,
+        theme_color: `#191F25`,
         display: `minimal-ui`,
         icon: `src/images/nmLogo.png`, // This path is relative to the root of the site.
       },
