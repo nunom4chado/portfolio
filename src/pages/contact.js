@@ -36,7 +36,7 @@ const ContactPage = () => (
     <CenterSection>
       <TextCenter>
         <h1><span css="color: #4CDFE8;">connect</span>() with&nbsp;me</h1>
-        <ContactParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</ContactParagraph>
+        <ContactParagraph>Get in touch with me or check one of my profiles bellow. I´m currently looking for a job in Porto or Braga (Portugal), or remote but not as freelancer.</ContactParagraph>
         <ExternalLink rel="noopener noreferrer" href="https://www.linkedin.com/in/nunom4chado/" target="_blank">
           <FontAwesomeIcon icon={["fab", "linkedin-in"]}  />
         </ExternalLink>
