@@ -25,7 +25,7 @@ const Grid = styled.div`
 
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
   }
 `
 const IconLink = styled.a`
