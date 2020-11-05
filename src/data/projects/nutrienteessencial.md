@@ -7,7 +7,7 @@ tags: [
   "React",
   "Redux",
   "Wordpress",
-  "REST"
+  "GraphQL"
 ]
 ---
 

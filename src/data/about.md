@@ -62,4 +62,4 @@ experience: {
 
 I´m a tech passionate that evolved from IT to Web Developer. I enjoy the hole process of building complete web applications but have a special interest in building interfaces.
 
-Aside from tech, the things that I love to do are play guitar, occasionally piano, watch series and movies, skateboard/snowboard, calisthenics, yoga, and pretty much every radical outdoor activity.
+Aside from tech, the things that I love to do are play guitar, occasionally piano, watch series and movies, skateboard, calisthenics, yoga, and pretty much every radical outdoor activity.
